@@ -1,0 +1,24 @@
+import matplotlib.pyplot as plt
+
+# Sample data: emotional associations with favorite colors
+# These are example values; you can customize them with real class data if available
+emotional_associations = {
+    'Calm/Peaceful (Blue)': 6,
+    'Energetic/Confident (Red)': 4,
+    'Happy/Optimistic (Yellow)': 3,
+    'Creative/Unique (Purple)': 2,
+    'Natural/Relaxed (Green)': 3,
+    'Other Emotions': 2
+}
+
+# Create a pie chart
+labels = emotional_associations.keys()
+sizes = emotional_associations.values()
+
+plt.figure(figsize=(8, 8))
+plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=140, colors=plt.cm.Pastel1.colors)
+plt.title('Emotional Reasons Behind Favorite Colors (Sample Class Data)')
+plt.axis('equal')  # Equal aspect ratio ensures pie is drawn as a circle.
+plt.tight_layout()
+
+plt.show()
